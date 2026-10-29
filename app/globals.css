@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* =========================================
+   BREAKPOINTS
+========================================= */
+
+@custom-variant tab (@media (min-width: 720px));
+@custom-variant desk (@media (min-width: 1024px) and (min-aspect-ratio: 5/4));
+
+/* =========================================
+   THEME  (cream + navy)
+========================================= */
+
+@theme {
+  --font-serif: var(--font-libre-baskerville), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-script: var(--font-script), "Snell Roundhand", cursive;
+
+  --color-navy: #11264b;
+  --color-navy-deep: #0d1f40;
+  --color-cream: #e9decc;
+  --color-navy-soft: #38527a;
+  --color-gold: #c9a55c;
+}
+
+html { margin: 0; padding: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #e9decc;
+  color: #11264b;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; }
+
+.font-editorial { font-family: var(--font-libre-baskerville), Georgia, "Times New Roman", serif; }
+.font-script { font-family: var(--font-script), "Snell Roundhand", cursive; }
+
+/* =========================================================
+   ANIMATIONS  (only idle CTA glow remains)
+========================================================= */
+
+@keyframes jhv-glow {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(17, 38, 75, 0)); }
+  50%      { filter: drop-shadow(0 4px 12px rgba(17, 38, 75, 0.28)); }
+}
+
+/* =========================================================
+   MAC ONLY - taller Julio image (class .is-mac set by script in layout)
+========================================================= */
+
+/* line breaks that only apply on Mac / only off Mac */
+.br-mac { display: none; }
+.is-mac .br-mac { display: inline; }
+.is-mac .br-other { display: none; }
+
+@media (min-width: 1024px) and (min-aspect-ratio: 5/4) {
+  /* Mac home page: smaller name + subtitle */
+  .is-mac .hero-h1-home { font-size: calc(78 * var(--u)); }
+  .is-mac .hero-sub-home { font-size: calc(16.5 * var(--u)); }
+
+  .is-mac .hero-bg {
+    height: calc(930 * var(--u));
+    background-size: cover;
+    background-position: right bottom;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
