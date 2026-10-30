@@ -1,13 +1,13 @@
-
 import Link from "next/link";
 import Image from "next/image";
+import SiteMenu from "@/components/SiteMenu";
 
 export default function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-30 flex h-[76px] items-center justify-between px-6 tab:h-[88px] tab:px-10 desk:h-[calc(108_*_var(--u))] desk:min-h-[64px] desk:pl-[calc(103_*_var(--u))] desk:pr-[4.7vw]">
       <Link
         href="/"
-        aria-label="JHV home"
+        aria-label="Julio Herrera Velutini home"
         className="group flex items-center gap-3 no-underline focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-navy desk:gap-[calc(10_*_var(--u))]"
       >
         <Image
@@ -22,6 +22,8 @@ export default function Header() {
           JHV
         </span>
       </Link>
+
+      <SiteMenu />
     </header>
   );
 }

@@ -48,6 +48,10 @@ export const metadata = {
 
   metadataBase: new URL("https://www.julioherreravelutini.xyz"),
 
+  applicationName: "Julio Herrera Velutini",
+  category: "finance",
+  formatDetection: { telephone: false, email: false, address: false },
+
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",

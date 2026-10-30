@@ -71,6 +71,19 @@ const pageJsonLd = {
   primaryImageOfPage: { "@type": "ImageObject", url: OG_IMAGE },
   mainEntityOfPage: PAGE_URL,
   breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+  mainEntity: {
+    "@type": "Article",
+    "@id": `${PAGE_URL}#article`,
+    headline: META_TITLE,
+    description: META_DESCRIPTION,
+    inLanguage: "en",
+    image: OG_IMAGE,
+    datePublished: "2026-10-29",
+    dateModified: "2026-10-29",
+    author: { "@type": "Person", "@id": `${SITE_URL}/#person`, name: "Julio Herrera Velutini", url: SITE_URL },
+    publisher: { "@type": "Person", "@id": `${SITE_URL}/#person`, name: "Julio Herrera Velutini" },
+    mainEntityOfPage: PAGE_URL,
+  },
 };
 
 /* JSON-LD: breadcrumb */
