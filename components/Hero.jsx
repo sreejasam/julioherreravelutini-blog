@@ -340,13 +340,13 @@ export default function Hero({
             desk:block
             desk:h-[calc(849_*_var(--u))]
             desk:w-screen
-            desk:[background:url(/images/hero-bg.jpg)_100%_100%/100%_100%_no-repeat]
+            desk:[background:url(/images/Slicked-Back-Gentleman-in-Navy-Suit.png)_75%_100%/41%_90%_no-repeat]
           "
         />
 
         {/* Mobile / tablet portrait */}
         <Image
-          src="/images/hero-portrait.jpg"
+          src="/images/Slicked-Back-Gentleman-in-Navy-Suit.png"
           alt="Julio Herrera Velutini"
           width={1093}
           height={849}
