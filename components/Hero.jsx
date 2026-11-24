@@ -356,8 +356,6 @@ export default function Hero({
             block
             max-w-none
             ${home ? "absolute inset-0 h-full w-full object-cover object-[center_top]" : "h-auto w-full"}
-            [-webkit-mask-image:linear-gradient(to_bottom,transparent_0,#000_14%)]
-            [mask-image:linear-gradient(to_bottom,transparent_0,#000_14%)]
 
             desk:hidden
           `}

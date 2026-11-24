@@ -64,8 +64,9 @@ img { max-width: 100%; }
 
   .is-mac .hero-bg {
     height: calc(930 * var(--u));
-    background-size: cover;
-    background-position: right bottom;
+    /* image is square: size it by height so it never scales with screen width */
+    background-size: auto 90%;
+    background-position: 77% 100%;
   }
 }
 
